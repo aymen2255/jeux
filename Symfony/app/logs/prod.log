@@ -1,0 +1,1 @@
+[2012-04-22 19:32:49] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /bundles/tutowelcome/css/welcome.css" (uncaught exception) at /home/aymen/www/jeux/Symfony/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/EventListener/RouterListener.php line 83 [] []
