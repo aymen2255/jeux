@@ -24,6 +24,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_step' => true,
        '_configurator_final' => true,
        'tutoWelcomeBundle_homepage' => true,
+       'tutoWelcomeBundle_whoami' => true,
     );
 
     /**
@@ -100,5 +101,10 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function gettutoWelcomeBundle_homepageRouteInfo()
     {
         return array(array (), array (  '_controller' => 'tuto\\WelcomeBundle\\Controller\\HomepageController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function gettutoWelcomeBundle_whoamiRouteInfo()
+    {
+        return array(array (  0 => 'name',), array (  '_controller' => 'tuto\\WelcomeBundle\\Controller\\HomepageController::whoAmIAction',), array (  'name' => '\\w+',), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '\\w+',    3 => 'name',  ),  1 =>   array (    0 => 'text',    1 => '/qui-suis-je',  ),));
     }
 }

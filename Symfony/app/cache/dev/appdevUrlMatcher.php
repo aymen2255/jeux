@@ -92,6 +92,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'tuto\\WelcomeBundle\\Controller\\HomepageController::indexAction',  '_route' => 'tutoWelcomeBundle_homepage',);
         }
 
+        // tutoWelcomeBundle_whoami
+        if (0 === strpos($pathinfo, '/qui-suis-je') && preg_match('#^/qui\\-suis\\-je/(?P<name>\\w+)$#xs', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'tuto\\WelcomeBundle\\Controller\\HomepageController::whoAmIAction',)), array('_route' => 'tutoWelcomeBundle_whoami'));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

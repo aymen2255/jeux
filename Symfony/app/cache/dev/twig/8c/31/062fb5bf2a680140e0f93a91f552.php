@@ -33,7 +33,12 @@ class __TwigTemplate_8c31062fb5bf2a680140e0f93a91f552 extends Twig_Template
     public function block_content($context, array $blocks = array())
     {
         // line 6
-        echo "Vous êtes en train de lire la première page générée avec Symfony2, la homepage.
+        echo "<p>
+    Vous êtes en train de lire la première page générée avec Symfony2, la homepage.
+    <br><br>
+    Pour mieux vous connaitre, informez-nous de votre pseudo en tapant cette url dans votre barre d'adresse et en y ajoutant votre pseudo :
+    <strong>http://jeux.dev/app_dev.php/qui-suis-je/mon_super_pseudo</strong>
+</p>
 ";
     }
 

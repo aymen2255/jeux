@@ -32,18 +32,41 @@ class __TwigTemplate_2837003ed05f169bc99cc581652b0099 extends Twig_Template
     <body>
         <div id=\"container\">
             <header>
-                <a href=\"";
+    <a href=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("tutoWelcomeBundle_homepage"), "html", null, true);
         echo "\" title=\"Retour à l'accueil\">Tutoriel Symfony2</a>
-                <p>Bonjour et bienvenue dans ce tutoriel pour Symfony2</p>
-            </header>
+    <p>
+      ";
+        // line 15
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getContext($context, "app"), "session"), "getFlashes", array(), "method"));
+        foreach ($context['_seq'] as $context["key"] => $context["flash"]) {
+            // line 16
+            echo "        ";
+            if ($this->getContext($context, "flash")) {
+                // line 17
+                echo "            ";
+                echo twig_escape_filter($this->env, $this->getContext($context, "flash"), "html", null, true);
+                echo "
+        ";
+            }
+            // line 19
+            echo "      ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['key'], $context['flash'], $context['_parent'], $context['loop']);
+        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        // line 20
+        echo "    </p>
+</header>
+
 
             <div id=\"content\">
                 ";
-        // line 18
+        // line 25
         $this->displayBlock('content', $context, $blocks);
-        // line 19
+        // line 26
         echo "            </div>
             <footer>
             </footer>
@@ -68,7 +91,7 @@ class __TwigTemplate_2837003ed05f169bc99cc581652b0099 extends Twig_Template
     {
     }
 
-    // line 18
+    // line 25
     public function block_content($context, array $blocks = array())
     {
     }
